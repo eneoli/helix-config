@@ -1,0 +1,37 @@
+
+[[language]]
+name = "rust"
+language-id = "rust"
+language-servers = [ "rust-analyzer" ]
+scope = "source.rust"
+file-types = ["rs"]
+roots = ["Cargo.lock", "Cargo.toml"]
+
+[[langugae]]
+name = "cpp"
+language-id = "cpp"
+scope = "sources.cpp"
+file-types = ["cpp", "cc", "hpp", "h"]
+
+[[language]]
+name = "typescript"
+language-id = "typescript"
+language-servers = [ "typescript-language-server" ]
+scope = "sources.typescript"
+file-types = ["ts", "tsx"]
+roots = ["package.json"]
+auto-format = true
+
+[[language]]
+name = "haskell"
+scope = "source.haskell"
+language-servers = [ "haskell-language-server" ]
+file-types = ["hs"]
+auto-format = true
+
+[[langauge]]
+name = "php"
+scope = "sources.php"
+language-servers = [ "intelephense" ]
+file-types = "php"
+auto-format = true
