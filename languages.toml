@@ -13,6 +13,16 @@ language-id = "cpp"
 scope = "sources.cpp"
 file-types = ["cpp", "cc", "hpp", "h"]
 
+[[langugae]]
+name = "html"
+language-id = "html"
+language-servers = ["vscode-html-language-server"]
+
+[[language]]
+name = "css"
+language-id = "css"
+language-servers = ["vscode-css-language-server"]
+
 [[language]]
 name = "typescript"
 language-id = "typescript"
@@ -21,6 +31,17 @@ scope = "sources.typescript"
 file-types = ["ts", "tsx"]
 roots = ["package.json"]
 auto-format = true
+
+[[language]]
+name = "tsx"
+language-id = "tsx"
+file-types = ["tsx"]
+
+[[language]]
+name = "graphql"
+language-id = "graphql"
+language-servers = ["graphql-lsp"]
+file-types = ["graphql", "graphqls", "gql", "gqls"]
 
 [[language]]
 name = "haskell"
