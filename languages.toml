@@ -23,10 +23,26 @@ name = "css"
 language-id = "css"
 language-servers = ["vscode-css-language-server"]
 
+[language-server.eslint]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+
+[language-server.eslint.config]
+codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
+format = { enable = true }
+nodePath = ""
+quiet = false
+rulesCustomizations = []
+run = "onType"
+validate = "on"
+experimental = {}
+problems = { shortenToSingleLine = false }
+workingDirectory = { mode = "auto" }
+
 [[language]]
 name = "typescript"
 language-id = "typescript"
-language-servers = [ "typescript-language-server" ]
+language-servers = [ "typescript-language-server", "eslint" ]
 scope = "sources.typescript"
 file-types = ["ts", "tsx"]
 roots = ["package.json"]
@@ -35,7 +51,9 @@ auto-format = true
 [[language]]
 name = "tsx"
 language-id = "tsx"
+language-servers = [ "typescript-language-server", "eslint" ]
 file-types = ["tsx"]
+indent = { unit = "\t", tab-width = 4 }
 
 [[language]]
 name = "graphql"
@@ -55,4 +73,11 @@ name = "php"
 scope = "sources.php"
 language-servers = [ "intelephense" ]
 file-types = "php"
+auto-format = true
+
+[[langauge]]
+name = "java"
+scope = "sources.java"
+language-servers = [ "jdtls" ]
+file-types = "java"
 auto-format = true
